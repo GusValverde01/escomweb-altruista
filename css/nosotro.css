@@ -1,0 +1,203 @@
+
+/* Página Nosotros */
+.contenedor{
+    margin-bottom: 4rem;
+}
+.contenedor h1 {
+    font-size: 2rem; /* Tamaño del H1 */
+    text-align: center; /* Centrar el H1 */
+    margin-bottom: 2rem; /* Espacio inferior */
+}
+
+.contenedor h2 {
+    font-size: 2.6rem; /* Tamaño del H2 */
+    text-align: center; /* Centrar el H2 */
+    margin-bottom: 3rem; /* Espacio inferior */
+}
+
+.conecta-nosotros p {
+    font-size: 2rem; /* Tamaño de los párrafos */
+    text-align: center; /* Centrar los párrafos */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin-bottom: 1.5rem; /* Espacio inferior */
+}
+
+.conecta-nosotros p:last-of-type {
+    border-bottom: 3px solid #71B100; /* Línea debajo del último párrafo */
+    padding-bottom: 1rem; /* Espaciado interior inferior */
+    margin-bottom: 3rem; /* Espacio inferior extra */
+}
+
+.contenido-nosotros {
+    margin-bottom: 3rem; /* Espacio inferior adicional */
+}
+
+.contenido-nosotros:after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 3px solid #71B100; /* Línea al final de contenido-nosotros */
+    margin-top: 2rem; /* Espacio superior antes de la línea */
+}
+
+.entrada-inversion p {
+    font-size: 2rem; /* Tamaño general de los párrafos */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin-bottom: 2rem; /* Espacio inferior */
+}
+
+.texto-nosotros blockquote {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 1rem 0 0 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2.5rem;
+    }
+}
+
+/* Parte de Iconos */
+.iconos-anuncio h1 {
+    font-size: 2rem;
+}
+
+.iconos-anuncio h2 {
+    font-size: 1.6rem;
+}
+
+.iconos-nosotros {
+    padding-top: 2rem;
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .iconos-nosotros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.icono {
+    text-align: center;
+}
+
+.icono h3 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.icono p {
+    padding: 1rem 1rem;
+    font-size: 1rem;
+}
+
+/* Fin de Iconos */
+
+/*Seccion de Grafico Contacto*/
+.imagen-contacto {
+    background-image: url('../assets/img/06r.jpg');
+}
+
+.imagen-contacto {
+    position: relative; /* Necesario para el posicionamiento absoluto del pseudo-elemento */
+    background-position: center bottom;
+    background-size: cover;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem; /* Añadir separación arriba de la sección */
+    overflow: hidden; /* Asegura que el pseudo-elemento no desborde */
+}
+
+.imagen-contacto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Capa oscura sobre la imagen */
+    z-index: 1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+}
+
+.imagen-contacto h1, 
+.imagen-contacto p, 
+.imagen-contacto a {
+    position: relative; /* Asegura que el contenido esté por encima de la capa oscura */
+    z-index: 2;
+}
+
+.imagen-contacto h1 {
+    font-size: 2rem;
+    font-weight:bold;
+    color: #fff;
+    text-align: center;
+}
+
+.imagen-contacto p {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.boton-amarillo-padd{
+    margin-top: 2rem;
+}
+/*Seccion de Grafico Contacto*/
+
+/* Boton mas chiquito*/
+.boton-amarillo {
+    background-color: var(--cafe);
+    color: var(--blanco);
+    font-weight: var(--bold);
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top: var(--separacion) / 2;
+    display: inline-block;
+    border-radius: 7px;
+    transition: all ease 0.5s;
+}
+.boton-amarillo:hover{
+    background-color: #7A4C22;
+}
+
+
+/* Parte Blog */
+.seccion-inferior {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .seccion-inferior {
+        display: grid;
+        grid-template-columns:  2fr;
+    }
+}
+
+.blog h3 {
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.entrada-blog {
+    margin-bottom: 2rem;
+}
+
+.entrada-blog span{
+    font-weight: 700;
+}
+.entrada-blog:last-of-type {
+    margin-bottom: 0;
+}
+
+
+

@@ -1,0 +1,92 @@
+/* Estilos generales */
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333333;
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+
+.seccion-cuestionario h1, h2{
+    text-align: center;
+}
+p.descripcion {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Secciones */
+.secciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.seccion-cuestionario {
+    background: #f3f3f3;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.seccion-cuestionario ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.seccion-cuestionario ul li {
+    margin-bottom: 0.5rem;
+}
+
+.seccion-cuestionario a {
+    color: #E08709;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.seccion-cuestionario a:hover {
+    text-decoration: underline;
+}
+
+/* Botón */
+.boton-amarillo-padd {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.boton-amarillo {
+    display: inline-block;
+    background: #E08709;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.boton-amarillo:hover {
+    background: #c77508;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .secciones {
+        grid-template-columns: 1fr;
+    }
+}

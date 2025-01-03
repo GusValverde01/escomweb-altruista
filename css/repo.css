@@ -1,0 +1,281 @@
+
+/* Parte Blog */
+.contenedor{
+    margin-bottom: 4rem;
+}
+.contenedor h1 {
+    font-size: 2rem; /* Tamaño del H1 */
+    text-align: center; /* Centrar el H1 */
+    margin-bottom: 2rem; /* Espacio inferior */
+    padding-top: 3rem;
+}
+
+.contenedor h2 {
+    font-size: 2.6rem; /* Tamaño del H2 */
+    text-align: center; /* Centrar el H2 */
+    margin-bottom: 3rem; /* Espacio inferior */
+}
+
+
+@media (min-width: 768px) {
+    .seccion-inferior {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 2rem;
+    }
+}
+
+.blog h3 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.entrada-blog {
+    margin-bottom: 2rem;
+}
+
+.entrada-blog:last-of-type {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .entrada-blog {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+.texto-entrada a {
+    color: var(--negro);
+    margin-top: 2rem;
+    display: block;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+@media (min-width: 768px) {
+    .texto-entrada a {
+        margin-top: 0;
+    }
+}
+.texto-entrada span{
+    color: var(--bs-success);
+}
+.texto-entrada h4 {
+    margin: 0;
+    line-height: 1.4;
+    position: relative; /* Necesario para el pseudo-elemento absoluto */
+}
+
+.texto-entrada h4::after {
+    content: '';
+    display: block;
+    width: 100%; /* Ajusta el ancho según tus necesidades */
+    height: 3px; /* Cambia a 2px para una línea más delgada */
+    background-color: var(--bs-secondary);
+    margin-top: 0.5rem; /* Ajusta el margen según tus necesidades */
+}
+
+
+/* Fin Parte Blog */
+
+img,
+picture {
+    width: 100%;
+    display: block;
+}
+
+.imagen img{
+    display: flex;
+    justify-content: center; /* Centrar la imagen */
+    margin: 0 auto;
+}
+
+.imagen img {
+    width: 70%; /* Tamaño de la imagen por defecto */
+    height: auto;
+}
+
+/* Sección Técnicas */
+.tecnicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.tecnica {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+}
+
+.tecnica h3 {
+    margin: 1rem 0;
+    color: #71B100;
+    font-size: 1.5rem;
+}
+
+.tecnica p {
+    margin: 0.5rem 0;
+}
+
+/* Sección Beneficios */
+.beneficios {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.beneficios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.beneficios li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.beneficios li::before {
+    content: "\2713"; /* Checkmark */
+    color: #71B100;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Sección Videos */
+.videos {
+    margin: 2rem 0;
+}
+
+.video {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.video iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+}
+
+.video h3 {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    color: #2c3e50;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 1rem;
+    }
+
+    .tecnicas {
+        grid-template-columns: 1fr;
+    }
+}
+
+.introduccion h2{
+    margin-top: 2rem;
+    text-align: center;
+}
+.introduccion p{
+    text-align: center;
+}
+
+.caracteristicas h2{
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.bitrix h2{
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-align: center;
+}
+.bitrix p{
+    text-align: center;
+}
+
+.beneficios h2{
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+.beneficios p{
+    text-align: center;
+}
+
+.recomendaciones h2{
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-align: center;
+}
+.recomendaciones p{
+    text-align: center;
+}
+
+/* Estilos para elementos <li> */
+.pin li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-align: center; /* Centra el contenido */
+    list-style: none; /* Elimina los puntos de las listas */
+}
+
+.pin li::before {
+    content: '\2713'; /* Checkmark */
+    position: absolute;
+    left: -1rem; /* Ajusta la posición para centrado */
+    top: 0.4rem;
+    color: #71B100;
+    font-weight: bold;
+}
+
+.pin li:hover {
+    color: #71B100;
+    transform: translateX(5px);
+}
+
+
+
+/* Estilos para el botón en la sección .cta */
+.cta {
+    text-align: center; /* Centra el botón */
+    margin-top: 3.5rem;
+}
+
+.cta a {
+    display: inline-block;
+    background-color: #71B100;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta a:hover {
+    background-color: #5c9100;
+    transform: scale(1.05);
+}
+
+
